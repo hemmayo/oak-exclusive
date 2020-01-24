@@ -1,0 +1,101 @@
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 20rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 20rem;
+}
+
+.companies-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.companies-list > *:not(:last-of-type) {
+  margin-right: 6rem;
+}
+
+.theme-text-dark {
+  color: #141414;
+}
+.theme-text-red {
+  color: #c90b12;
+}
+.theme-bg-dark {
+  background-color: #141414;
+}
+.theme-bg-red {
+  background-color: #c90b12;
+}
+
+.subscribe-input {
+  border: 2px solid #c90b12;
+  padding: 0.7rem 1rem;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+
+button {
+  background-color: #c90b12 !important;
+}
+
+li {
+  line-height: 2;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 25rem;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.social-links > *:not(:last-of-type) {
+  margin-right: 1.2rem;
+}
+
+.payment-methods {
+  display: flex;
+}
+
+.payment-methods img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.payment-methods > *:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  height: 25rem;
+}
