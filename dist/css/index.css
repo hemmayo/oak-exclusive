@@ -109,6 +109,7 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
 }
+
 .defines-us-card {
   border-radius: 4px;
   text-align: left;
@@ -121,4 +122,19 @@ section {
 
 .defines-us-card > * {
   margin-bottom: 2rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.clients-grid > * {
+  width: 7rem;
+}
+
+img {
+  image-rendering: optimizeSpeed;
 }
