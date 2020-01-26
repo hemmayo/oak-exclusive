@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -37,6 +36,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .companies-list > *:not(:last-of-type) {
   margin-right: 6rem;
 }
@@ -44,12 +44,19 @@
 .theme-text-dark {
   color: #141414;
 }
+
 .theme-text-red {
   color: #c90b12;
 }
+
+.theme-text-light {
+  color: #5a646a;
+}
+
 .theme-bg-dark {
   background-color: #141414;
 }
+
 .theme-bg-red {
   background-color: #c90b12;
 }
@@ -146,4 +153,92 @@ section {
 
 img {
   image-rendering: optimizeSpeed;
+}
+
+.careers-cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.careers-cover .bg-image {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 40%;
+}
+
+.careers-cover .container,
+.careers-cover .footer {
+  z-index: 10;
+}
+
+.careers-cover .container .subtitle {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.careers-cover .footer {
+  margin-top: 2rem;
+}
+
+.positions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.positions-list > :not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.position {
+  border-radius: 10px;
+  text-align: left;
+  padding: 4rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.position:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f8f9fa;
+}
+
+.position .details {
+  flex-basis: 70%;
+}
+
+.position .details > * {
+  margin-bottom: 1rem;
+}
+
+.position .location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn.btn-default {
+  background-color: #c90b12;
+  border-color: #c90b12;
+  color: #f8f9fa;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  outline: none;
+}
+
+.btn.btn-default:hover {
+  background-color: #a71a1f;
+  border-color: #a71a1f;
 }

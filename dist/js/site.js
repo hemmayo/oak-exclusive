@@ -1,3 +1,17 @@
+const DOMLoaded = () => {
+  $(function() {
+    var $page = window.location.pathname;
+    $(".navbar li a").each(function() {
+      var $href = $(this).attr("href");
+      if ($href == $page || $href == "") {
+        $(this).addClass("active");
+      } else {
+        $(this).removeClass("active");
+      }
+    });
+  });
+};
+
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
@@ -19,6 +33,7 @@ function includeHTML() {
           }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("src");
+          DOMLoaded();
           includeHTML();
         }
       };
@@ -31,17 +46,3 @@ function includeHTML() {
 }
 
 includeHTML();
-
-setTimeout(() => {
-  $(function() {
-    var $page = window.location.pathname;
-    $(".navbar li a").each(function() {
-      var $href = $(this).attr("href");
-      if ($href == $page || $href == "") {
-        $(this).addClass("active");
-      } else {
-        $(this).removeClass("active");
-      }
-    });
-  });
-}, 1000);
