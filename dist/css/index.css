@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #182832;
+}
+
+main {
+  min-height: 50vh;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -241,4 +249,67 @@ img {
 .btn.btn-default:hover {
   background-color: #a71a1f;
   border-color: #a71a1f;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem auto;
+}
+
+.contact-us .info {
+  flex-basis: 50%;
+  margin-right: 1rem;
+}
+
+.contact-us .info .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-us .info .subtitle {
+  font-size: x-large;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.contact-us .info .addresses {
+  font-size: x-large;
+  margin: 3rem 0;
+}
+
+.contact-us .info .addresses > :not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.contact-us .info .address h5 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.contact-us .info address {
+  color: #5a646a;
+  font-size: large;
+  font-weight: normal;
+}
+
+.contact-us .form {
+  background-color: #f8f8f8;
+  align-self: stretch;
+  width: 100%;
+  border: 1px solid #e1e6eb;
+  border-radius: 4px;
+  padding: 3rem 4rem;
+}
+
+.contact-us .form .form-control-lg {
+  border: 1px solid #e1e6eb;
+  padding: 1.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+.contact-us .form .form-control-lg::placeholder {
+  color: #acb5bb;
 }

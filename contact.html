@@ -5,7 +5,89 @@
   </head>
   <body>
     <include src="./partials/navbar.html"></include>
-    <main role="main"></main>
+    <main role="main">
+      <section class="contact-us container">
+        <div class="info">
+          <div class="heading">
+            <h1 class="title">Contact Us</h1>
+            <h2 class="subtitle">Get the conversation started.</h2>
+          </div>
+          <div class="addresses">
+            <div class="address">
+              <h5>Lagos Office</h5>
+              <address>
+                Plot 55, Block 3,<br />
+                Fatai Idowu Arobieke Street,<br />
+                Lekki Phase 1, Lagos.
+              </address>
+            </div>
+            <div class="address">
+              <h5>Abuja Office (Coming Soon)</h5>
+              <address>
+                Plot 55, Block 3,<br />
+                Fatai Idowu Arobieke Street,<br />
+                Lekki Phase 1, Lagos.
+              </address>
+            </div>
+            <div class="address">
+              <h5>Contact Information</h5>
+              <address>
+                info@oakexclusive.com<br />
+                +234 (0) 8030838998<br />
+                +234 (0) 1-2713108
+              </address>
+            </div>
+          </div>
+        </div>
+        <form class="form">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              placeholder="Subject"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              type="email"
+              class="form-control form-control-lg"
+              placeholder="Enter message"
+              required
+              rows="8"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-default">All done, send!</button>
+        </form>
+      </section>
+    </main>
     <include src="./partials/footer.html"></include>
 
     <script
