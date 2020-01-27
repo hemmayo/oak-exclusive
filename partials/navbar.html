@@ -9,8 +9,24 @@
     z-index: 100;
   }
 
+  .navbar.transparent {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+  }
+
   .navbar .logo {
     width: 5.5rem;
+    height: 5.5rem;
+    background: url("/dist/img/logo.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .navbar.transparent .logo {
+    background: url("/dist/img/logo-light.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   .navbar ul {
@@ -31,12 +47,19 @@
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
-  .navbar a:hover {
+  .navbar.transparent a.nav-link,
+  .navbar.transparent a.nav-link:active,
+  .navbar.transparent a.nav-link:visited {
+    color: #fff;
+  }
+
+  .navbar a.nav-link:hover {
     color: #c90b12;
   }
 
-  .navbar a.active {
-    color: #c90b12;
+  .navbar a.nav-link.active,
+  .navbar.transparent a.nav-link.active {
+    color: #c90b12 !important;
     position: relative;
   }
 
@@ -49,18 +72,64 @@
     color: #c90b12;
     transform: translate(-50%, 55%);
   }
+
+  .navbar a.dropdown-item.active {
+    background-color: transparent;
+    color: #c90b12;
+  }
+
+  .navbar a.dropdown-item.active::after {
+    display: none;
+  }
+
+  .navbar .navbar-collapse.collapse {
+    justify-content: flex-end;
+    /* background: white; */
+  }
 </style>
 
-<header class="navbar px-5">
-  <a href="/"><img class="logo" src="../dist/img/logo.svg"/></a>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/portfolio">Projects</a></li>
-      <li><a href="/careers">Company</a></li>
-      <li><a href="/contact">Contact us</a></li>
+<header class="navbar px-5 navbar-expand-lg navbar-light">
+  <a class="navbar-brand logo" href="/"></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="/services" class="nav-link">Services</a>
+      </li>
+      <li class="nav-item">
+        <a href="/portfolio" class="nav-link">Projects</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Company
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/about">About us</a>
+          <a class="dropdown-item" href="/careers">Careers</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="/contact" class="nav-link">Contact us</a>
+      </li>
     </ul>
   </nav>
 </header>

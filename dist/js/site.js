@@ -4,7 +4,12 @@ const DOMLoaded = () => {
   } catch {}
 
   $(function() {
-    var $page = window.location.pathname;
+    const $page = window.location.pathname;
+
+    if ($page === "/") {
+      $(".navbar").addClass("transparent");
+    }
+
     $(".navbar li a").each(function() {
       var $href = $(this).attr("href");
       if ($href == $page || $href == "") {
