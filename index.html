@@ -28,11 +28,7 @@
       <div
         class="homepage-cover position-relative overflow-hidden text-center vh-100 d-flex"
       >
-        <img
-          class="bg-image"
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80"
-          alt=""
-        />
+        <img class="bg-image" src="/dist/img/home-cover.jpg" alt="" />
         <div class="col-md-10 mx-auto my-auto">
           <div id="homepage-slider" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -98,8 +94,8 @@
           <img src="/dist/img/mtn.svg" />
         </div>
       </div>
-      <div class="container">
-        <div class="col-lg-6 px-5 pt-md-5 pb-md-4 mx-auto my-5 text-center">
+      <section class="container">
+        <div class="col-lg-6 px-5 py-5 mx-auto text-center">
           <h2>What we do</h2>
           <p class="lead text-muted">
             We offer a wide range of services, providing every step for
@@ -118,21 +114,8 @@
               conceptualisation and proofing process.
             </p>
           </div>
-          <div class="col-lg-5 text-center text-md-left">
-            <svg
-              class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="400"
-              height="400"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect>
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+          <div class="service-image col-lg-5">
+            <img class="bg-image" src="/dist/img/tailoring.jpg" />
           </div>
         </div>
         <div
@@ -140,35 +123,39 @@
         >
           <div class="col-lg-5">
             <h2 class="featurette-heading">
-              Industrial Tailoring
+              Screen Printing
             </h2>
             <p class="lead">
-              Meeting the requirements of our clients through a proficient
-              conceptualisation and proofing process.
+              Traditional and new age methods in our printing, depending on what
+              you intend to achieve.
             </p>
           </div>
-          <div class="col-lg-5">
-            <svg
-              class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              width="400"
-              height="400"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: 500x500"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect>
-            </svg>
+          <div class="service-image col-lg-5">
+            <img class="bg-image" src="/dist/img/screen-printing.jpg" />
           </div>
         </div>
-        <p class="text-center my-5">
+        <div
+          class="d-flex flex-column flex-md-row py-5 py-md-0 justify-content-between align-items-center my-5"
+        >
+          <div class="col-lg-5 text-center text-md-left">
+            <h2 class="featurette-heading">
+              Embroidery
+            </h2>
+            <p class="lead">
+              Our advanced embroidery softwares enable easy, accurate and prompt
+              digitising of very complex designs for our in-house use.
+            </p>
+          </div>
+          <div class="service-image col-lg-5">
+            <img class="bg-image" src="/dist/img/embroidery.jpg" />
+          </div>
+        </div>
+        <p class="text-center my-5 pt-5">
           <a href="/services" class="btn btn-lg btn-default"
             >More of our services</a
           >
         </p>
-      </div>
+      </section>
     </main>
     <include src="/partials/footer.html"></include>
 

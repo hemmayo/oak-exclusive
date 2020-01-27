@@ -26,6 +26,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 main {
   min-height: 50vh;
 }
@@ -548,4 +552,21 @@ img {
 
 #homepage-slider .carousel-indicators li {
   background-color: #fff;
+}
+
+.service-image {
+  height: 25rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-image .bg-image {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
