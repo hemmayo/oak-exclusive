@@ -519,6 +519,10 @@ img {
   #homepage-slider .carousel-item {
     height: 100vh;
   }
+  .homepage-cover .carousel-caption h1 {
+    font-size: 2.3rem;
+    line-height: 1.5;
+  }
 }
 
 @media screen and (min-width: 992px) {

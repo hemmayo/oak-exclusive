@@ -21,6 +21,22 @@ const DOMLoaded = () => {
   });
 };
 
+$("#contact-form").submit(function(evt) {
+  evt.preventDefault();
+
+  const supportEmail = "info@oakexclusive.com";
+  const inputs = $("#contact-form :input");
+
+  const values = {};
+  inputs.each(function() {
+    values[this.name] = $(this).val();
+  });
+
+  values.body = `${values.body}\n\n Sent by: ${values.first_name} ${values.last_name}`;
+
+  window.location = `mailto:${supportEmail}?subject=${values.subject}&body=${values.body}`;
+});
+
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
