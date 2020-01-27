@@ -157,6 +157,16 @@ section {
   height: 25rem;
 }
 
+@media screen and (max-width: 992px) {
+  .jumbotron {
+    height: 15rem;
+  }
+
+  .jumbotron h1 {
+    font-size: 2.3rem;
+  }
+}
+
 .defines-us-cards {
   margin: 2rem;
   display: grid;
