@@ -85,10 +85,21 @@
 
   .navbar .navbar-collapse.collapse {
     justify-content: flex-end;
-    transition: 0.2s all ease-in-out;
+    background: #fff;
   }
-  .navbar .navbar-collapse.collapse.show {
-    padding: 2rem;
+
+  .navbar.transparent .navbar-collapse.collapse {
+    background: transparent;
+  }
+
+  @media screen and (max-width: 992px) {
+    .navbar .navbar-collapse.collapse {
+      padding: 4rem;
+      margin: 0 -4rem;
+    }
+  }
+
+  .navbar.transparent .navbar-collapse.collapse.show {
     background: #141414;
   }
 </style>
