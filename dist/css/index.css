@@ -1,3 +1,8 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css");
+
 *,
 *::before,
 *::after {
@@ -24,7 +29,7 @@ main {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -34,7 +39,7 @@ main {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 20rem;
+  height: 25rem;
 }
 .carousel-item > img {
   position: absolute;
@@ -253,12 +258,18 @@ img {
 .btn.btn-default {
   background-color: #c90b12;
   border-color: #c90b12;
+
   color: #f8f9fa;
   font-weight: bold;
   padding: 1rem 2rem;
   font-size: large;
   outline: none;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 0 0.2rem rgba(201, 10, 17, 0.15);
 }
 
 .btn.btn-default:hover {
@@ -413,4 +424,24 @@ img {
   object-fit: cover;
   border-radius: 10px;
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.homepage-cover {
+  position: relative;
+  background-color: #000;
+}
+
+.homepage-cover .bg-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.homepage-cover .carousel-caption p {
+  font-size: 1.4rem;
+  line-height: 1.5;
 }

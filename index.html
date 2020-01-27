@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <include src="/partials/head.html"></include>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Oak Exclusive</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./dist/css/index.css" />
   </head>
   <body>
     <main role="main">
       <div
-        class="position-relative overflow-hidden text-center vh-100 bg-dark d-flex"
+        class="homepage-cover position-relative overflow-hidden text-center vh-100 d-flex"
       >
-        <div class="col-md-8 mx-auto my-auto">
+        <img
+          class="bg-image"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80"
+          alt=""
+        />
+        <div class="col-md-10 mx-auto my-auto">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li
@@ -16,21 +37,17 @@
                 data-slide-to="0"
                 class="active"
               ></li>
-              <li
-                data-target="#myCarousel"
-                data-slide-to="1"
-                class="active"
-              ></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2" class=""></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="container">
                   <div class="carousel-caption">
-                    <h1>
+                    <h1 class="display-4 font-weight-bold mb-4">
                       Realising the full potential of Africa’s textile industry
                     </h1>
-                    <p>
+                    <p class="lead mb-4">
                       Our reputation stems from a rich foundation of quality
                     </p>
                     <p>
@@ -44,17 +61,17 @@
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center p-5">
-        <span>Companies we have worked with</span>
+        <span class="text-muted">Companies we have worked with</span>
         <div class="companies-list">
-          <img src="./dist/img/exxon.svg" />
-          <img src="./dist/img/7up.svg" />
-          <img src="./dist/img/access.svg" />
-          <img src="./dist/img/british.svg" />
-          <img src="./dist/img/mtn.svg" />
+          <img src="/dist/img/exxon.svg" />
+          <img src="/dist/img/7up.svg" />
+          <img src="/dist/img/access.svg" />
+          <img src="/dist/img/british.svg" />
+          <img src="/dist/img/mtn.svg" />
         </div>
       </div>
       <div class="container">
-        <div class="col-lg-6 px-5 pt-md-5 pb-md-4 mx-auto my-3 text-center">
+        <div class="col-lg-6 px-5 pt-md-5 pb-md-4 mx-auto my-5 text-center">
           <h2>What we do</h2>
           <p class="lead">
             We offer a wide range of services, providing every step for
@@ -116,19 +133,29 @@
             </svg>
           </div>
         </div>
-        <p class="text-center">
+        <p class="text-center my-5">
           <a href="#" class="btn btn-lg btn-default">More of our services</a>
         </p>
       </div>
     </main>
     <include src="/partials/footer.html"></include>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
     ></script>
-    <include src="/partials/scripts.html"></include>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="dist/js/site.js"></script>
+    <script src="/dist/js/site.js"></script>
   </body>
 </html>
