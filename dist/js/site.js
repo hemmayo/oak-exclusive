@@ -1,4 +1,8 @@
 const DOMLoaded = () => {
+  try {
+    $("a[data-fancybox]").fancybox();
+  } catch {}
+
   $(function() {
     var $page = window.location.pathname;
     $(".navbar li a").each(function() {
@@ -33,12 +37,12 @@ function includeHTML() {
           }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("src");
-          DOMLoaded();
           includeHTML();
         }
       };
       xhttp.open("GET", file, true);
       xhttp.send();
+      DOMLoaded();
       /* Exit the function: */
       return;
     }
@@ -46,3 +50,8 @@ function includeHTML() {
 }
 
 includeHTML();
+
+const script = document.createElement("script");
+script.src = "/dist/js/pace.js";
+script.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(script);

@@ -41,7 +41,7 @@ main {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 20rem;
+  /* height: 20rem; */
 }
 
 .companies-list {
@@ -86,10 +86,6 @@ p {
   background: transparent;
   outline: none;
   color: white;
-}
-
-button {
-  background-color: #c90b12 !important;
 }
 
 li {
@@ -198,8 +194,13 @@ img {
   z-index: 10;
 }
 
+.careers-cover .container .title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
 .careers-cover .container .subtitle {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -224,7 +225,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: pointer;
   border: 1px solid transparent;
 }
@@ -255,7 +256,9 @@ img {
   color: #f8f9fa;
   font-weight: bold;
   padding: 1rem 2rem;
+  font-size: large;
   outline: none;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .btn.btn-default:hover {
@@ -327,4 +330,87 @@ img {
 
 .contact-us .form .form-control-lg::placeholder {
   color: #acb5bb;
+}
+
+.portfolio-slider {
+  overflow: hidden;
+}
+
+.portfolio-slider h1 {
+  font-size: 2.5rem;
+}
+.portfolio-slider h5 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.portfolio-slider .carousel-indicators {
+  transform: translateY(300%);
+}
+
+.portfolio-slider .carousel-indicators .active {
+  background-color: #c90b12;
+}
+
+.portfolio-slider .carousel-indicators li {
+  background-color: #e1e6eb;
+}
+
+.portfolio-slider .carousel-inner {
+  height: 30rem;
+  border-radius: 10px;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.portfolio-item {
+  min-height: 35rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio-item .portfolio-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.works-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.work-item {
+  min-height: 30rem;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.work-item .work-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
