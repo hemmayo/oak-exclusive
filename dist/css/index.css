@@ -445,3 +445,15 @@ img {
   font-size: 1.4rem;
   line-height: 1.5;
 }
+
+#homepage-slider .carousel-indicators {
+  transform: translateY(1000%);
+}
+
+#homepage-slider .carousel-indicators .active {
+  background-color: #c90b12;
+}
+
+#homepage-slider .carousel-indicators li {
+  background-color: #fff;
+}
