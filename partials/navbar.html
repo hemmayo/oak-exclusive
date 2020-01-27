@@ -70,7 +70,7 @@
     bottom: 0;
     left: 50%;
     color: #c90b12;
-    transform: translate(-50%, 55%);
+    transform: translate(-50%, 35%);
   }
 
   .navbar a.dropdown-item.active {
@@ -78,13 +78,18 @@
     color: #c90b12;
   }
 
+  .navbar .navbar-collapse.collapse.show a.active::after,
   .navbar a.dropdown-item.active::after {
     display: none;
   }
 
   .navbar .navbar-collapse.collapse {
     justify-content: flex-end;
-    /* background: white; */
+    transition: 0.2s all ease-in-out;
+  }
+  .navbar .navbar-collapse.collapse.show {
+    padding: 2rem;
+    background: #141414;
   }
 </style>
 
