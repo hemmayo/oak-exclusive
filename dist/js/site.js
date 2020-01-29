@@ -21,20 +21,22 @@ const DOMLoaded = () => {
   });
 };
 
-$("#contact-form").submit(function(evt) {
+$("#contact-form").on("submit", function(evt) {
   evt.preventDefault();
 
-  const supportEmail = "info@oakexclusive.com";
-  const inputs = $("#contact-form :input");
-
-  const values = {};
-  inputs.each(function() {
-    values[this.name] = $(this).val();
+  $.ajax({
+    url: "/handle_contact_form.php",
+    data: $(this).serialize(),
+    type: "POST",
+    success: function(data) {
+      $("#mail-status").html(data);
+    },
+    error: function() {
+      $("#mail-status").html(
+        "<p class='alert alert-danger'>An error occured.</p>"
+      );
+    }
   });
-
-  values.body = `${values.body}\n\n Sent by: ${values.first_name} ${values.last_name}`;
-
-  window.location = `mailto:${supportEmail}?subject=${values.subject}&body=${values.body}`;
 });
 
 function includeHTML() {
