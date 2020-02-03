@@ -273,7 +273,12 @@ img {
   margin-bottom: 3rem;
 }
 
-.position {
+.position,
+.position:hover,
+.position:active {
+  color: #141414;
+  text-decoration: none;
+
   border-radius: 10px;
   text-align: left;
   padding: 4rem 3rem;
@@ -287,9 +292,10 @@ img {
 }
 
 .position:hover {
+  background: transparent !important;
   transform: scale(1.02);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f8f9fa;
+  border: 1px solid transparent;
 }
 
 .position .details {
