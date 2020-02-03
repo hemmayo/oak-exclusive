@@ -54,6 +54,13 @@ if (isset($_FILES['file_attach'])) //check uploaded file
         $output = "<p class='alert alert-danger'>" . $mymsg[$file_error] . "</p>";
         die($output);
     }
+    // $allowedExts = array("pdf", "doc", "docx");
+    // $extension = end(explode(".", $_FILES['file_attach']['name']));
+
+    // if (!(in_array($extension, $allowedExts))) {
+    //     $output = json_encode(array('type' => 'error', 'text' => 'Only PDF, DOC and DOCX extensions are allowed'));
+    //     die($output);
+    // }
 
     //read from the uploaded file & base64_encode content for the mail
     $handle = fopen($file_tmp_name, "r");
@@ -85,15 +92,15 @@ if ($file_attached) //continue if we have the file
     $body .= "--" . $separator . $eol;
     $body .= "Content-type:text/html; charset=utf-8\n";
     $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-    $body .= $message . $eol;
+    $body .= $message . $eol . $eol;
 
     // attachment
     $body .= "--" . $separator . $eol;
-    $body .= "Content-Type:" . $file_type . " ";
+    // $body .= "Content-Type:" . $file_type . " ";
     $body .= "Content-Type: application/octet-stream; name=\"" . $file_name . "\"" . $eol;
-    $body .= "Content-Transfer-Encoding: base64" . $eol;
-    $body .= "Content-Disposition: attachment; filename=\"" . $file_name . "\"" . $eol;
-    $body .= $encoded_content . $eol;
+    $body .= "Content-Disposition: attachment; filename=\"" . $file_name . "\"" . "; size=\"" . $file_size . "\"" . $eol;
+    $body .= "Content-Transfer-Encoding: base64" . $eol . $eol;
+    $body .= $encoded_content . $eol . $eol;
     $body .= "--" . $separator . "--";
 
 } else {
