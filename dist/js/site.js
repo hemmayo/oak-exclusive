@@ -30,6 +30,28 @@ $("#contact-form").on("submit", function(evt) {
     type: "POST",
     success: function(data) {
       $("#mail-status").html(data);
+      document.getElementById("contact-form").reset();
+    },
+    error: function() {
+      $("#mail-status").html(
+        "<p class='alert alert-danger'>An error occured.</p>"
+      );
+    }
+  });
+});
+
+$("#job-form").on("submit", function(evt) {
+  evt.preventDefault();
+
+  $.ajax({
+    url: "/handle_application_form.php",
+    data: new FormData(this),
+    type: "POST",
+    processData: false,
+    contentType: false,
+    success: function(data) {
+      $("#mail-status").html(data);
+      document.getElementById("job-form").reset();
     },
     error: function() {
       $("#mail-status").html(
