@@ -94,4 +94,55 @@ function includeHTML() {
   }
 }
 
+const getUrlVars = () => {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
+    m,
+    key,
+    value
+  ) {
+    vars[key] = value;
+  });
+  return vars;
+};
+
+const getUrlParam = (parameter, defaultvalue = "") => {
+  var urlparameter = defaultvalue;
+  if (window.location.href.indexOf(parameter) > -1) {
+    urlparameter = getUrlVars()[parameter];
+  }
+  return urlparameter;
+};
+
+const renderWorks = () => {
+  const project = getUrlParam("project");
+  const gallery = document.querySelector(".works-gallery");
+  const headingTitle = document.querySelector(".title");
+  const headingDescription = document.querySelector(".subtitle");
+
+  let newDom = "";
+  fetch("/works.json")
+    .then(res => res.json())
+    .then(works => {
+      try {
+        const projectTitle = works[project].title;
+        const projectDescription = works[project].description;
+
+        document.title = `${projectTitle} - Oak Exclusive`;
+        headingTitle.innerHTML = projectTitle;
+        headingDescription.innerHTML = projectDescription || "";
+
+        newDom = works[project].images.reduce(
+          (acc, image) =>
+            (acc += `<figure class="work-item bg-light"><a href="/dist/img/portfolio/${image}" data-fancybox="works"><img class="work-image" src="/dist/img/portfolio/${image}"  /> </a> </figure>`),
+          ""
+        );
+        gallery.innerHTML = newDom;
+      } catch {
+        window.location.href = "/portfolio";
+      }
+    })
+    .catch(() => (window.location.href = "/portfolio"));
+};
+
 includeHTML();

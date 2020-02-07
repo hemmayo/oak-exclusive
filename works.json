@@ -1,0 +1,84 @@
+{
+  "baby-bibs": {
+    "title": "Baby Bibs",
+    "coverImage": "baby-bib-1.jpg",
+    "description": "",
+    "images": [
+      "baby-bib-1.jpg",
+      "baby-bib-2.jpg",
+      "baby-bib-3.jpg",
+      "baby-bib-4.jpg",
+      "baby-bib-5.jpg",
+      "baby-bib-6.jpg",
+      "baby-bib-7.jpg"
+    ]
+  },
+  "aprons": {
+    "title": "Aprons",
+    "coverImage": "apron-2.jpg",
+    "description": "",
+    "images": [
+      "apron-1.jpg",
+      "apron-2.jpg",
+      "Apron Waist Red 1.jpg",
+      "Apron White 2.jpg",
+      "Apron Waist Red 3.jpg",
+      "Apron White 4.jpg",
+      "Apron Waist Red 5.jpg",
+      "Apron White 1.jpg",
+      "Apron Waist Red 2.jpg",
+      "Apron White 3.jpg",
+      "Apron Waist Red 4.jpg",
+      "Apron White 5.jpg"
+    ]
+  },
+  "tote-bags": {
+    "title": "Tote Bags",
+    "coverImage": "Tote Bag Navy 2.jpg",
+    "description": "",
+    "images": [
+      "Tote Bag Cream 1.jpg",
+      "Tote Bag Navy 2.jpg",
+      "Tote Bag Cream 3.jpg",
+      "Tote Bag Navy 1.jpg",
+      "Tote Bag Cream 2.jpg",
+      "Tote Bag Navy 3.jpg"
+    ]
+  },
+  "scrub": {
+    "title": "Scrub",
+    "coverImage": "Scrub White 2.jpg",
+    "description": "",
+    "images": [
+      "Scrub Blue 1.jpg",
+      "Scrub White 2.jpg",
+      "Scrub Blue 3.jpg",
+      "Scrub White 4.jpg",
+      "Scrub White 1.jpg",
+      "Scrub Blue 2.jpg",
+      "Scrub White 3.jpg",
+      "Scrub Blue 4.jpg",
+      "Scrub White 5.jpg",
+      "Scrub White 6.jpg",
+      "Scrub White 7.jpg",
+      "Scrub White 8.jpg"
+    ]
+  },
+  "t-shirts": {
+    "title": "T-Shirts",
+    "coverImage": "man.jpg",
+    "description": "",
+    "images": [
+      "hmgoepprod.jpg",
+      "image-2.jpg",
+      "image-3.jpg",
+      "lady.jpg",
+      "man-back.jpg",
+      "man.jpg",
+      "bf04270f_0d2c.jpg",
+      "68250ab9_b575.jpg",
+      "5c71ee54_338f.jpg",
+      "T-Shirt 1.jpg"
+    ]
+  }
+}
